@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="INITIALISATION/inv1/INV"/>
+<org.eventb.core.prProof name="INITIALISATION/inv2/INV"/>
+<org.eventb.core.prProof name="INITIALISATION/inv3/INV"/>
+<org.eventb.core.prProof name="INITIALISATION/inv4/INV"/>
+<org.eventb.core.prProof name="add_flight/inv1/INV"/>
+<org.eventb.core.prProof name="add_flight/inv2/INV"/>
+<org.eventb.core.prProof name="add_flight/inv4/INV"/>
+<org.eventb.core.prProof name="reserve_seat/grd1/WD"/>
+<org.eventb.core.prProof name="refuse_seat/grd2/WD"/>
+<org.eventb.core.prProof name="delete_flight/inv1/INV"/>
+<org.eventb.core.prProof name="delete_flight/inv2/INV"/>
+<org.eventb.core.prProof name="delete_flight/inv3/INV"/>
+<org.eventb.core.prProof name="delete_flight/inv4/INV"/>
+<org.eventb.core.prProof name="reserve_seat/grd3/THM"/>
+<org.eventb.core.prProof name="reserve_seat/grd4/WD"/>
+<org.eventb.core.prProof name="refuse_seat/grd3/WD"/>
+<org.eventb.core.prProof name="delete_flight/grd2/WD"/>
+<org.eventb.core.prProof name="reserve_seat/inv3/INV"/>
+<org.eventb.core.prProof name="reserve_seat/act1/WD"/>
+<org.eventb.core.prProof name="refuse_seat/inv3/INV"/>
+<org.eventb.core.prProof name="refuse_seat/act1/WD"/>
+<org.eventb.core.prProof name="INITIALISATION/inv5/INV"/>
+<org.eventb.core.prProof name="add_flight/inv5/INV"/>
+<org.eventb.core.prProof name="delete_flight/inv5/INV"/>
+<org.eventb.core.prProof name="reserve_seat/inv5/INV"/>
+<org.eventb.core.prProof name="refuse_seat/inv5/INV"/>
+</org.eventb.core.prFile>

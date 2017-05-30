@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CITY" org.eventb.core.type="ℙ(CITY)"/>
+<org.eventb.core.poIdentifier name="FLIGHT" org.eventb.core.type="ℙ(FLIGHT)"/>
+<org.eventb.core.poIdentifier name="RESERVE" org.eventb.core.type="ℙ(RESERVE)"/>
+<org.eventb.core.poIdentifier name="capacity" org.eventb.core.type="ℙ(FLIGHT×ℤ)"/>
+<org.eventb.core.poPredicate name="capacitz" org.eventb.core.predicate="finite(FLIGHT)" org.eventb.core.source="/tickets/tickets_context.buc|org.eventb.core.contextFile#tickets_context|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="capacit{" org.eventb.core.predicate="finite(RESERVE)" org.eventb.core.source="/tickets/tickets_context.buc|org.eventb.core.contextFile#tickets_context|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="capacit|" org.eventb.core.predicate="finite(CITY)" org.eventb.core.source="/tickets/tickets_context.buc|org.eventb.core.contextFile#tickets_context|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="capacit}" org.eventb.core.predicate="capacity∈FLIGHT → ℕ1" org.eventb.core.source="/tickets/tickets_context.buc|org.eventb.core.contextFile#tickets_context|org.eventb.core.axiom#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="arrival" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.poIdentifier name="departure" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.poIdentifier name="r_seats" org.eventb.core.type="ℙ(FLIGHT×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="size" org.eventb.core.type="ℙ(FLIGHT×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(FLIGHT×CITY))∈FLIGHT ⇸ CITY" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(FLIGHT×CITY))∈FLIGHT ⇸ CITY" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(FLIGHT×ℙ(ℤ)))∈FLIGHT ⇸ ℙ(ℕ1)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FLIGHT × {0}∈FLIGHT ⇸ ℕ1" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT∧f∈dom(∅ ⦂ ℙ(FLIGHT×CITY))⇒f∈dom(∅ ⦂ ℙ(FLIGHT×CITY))∧f∈dom(FLIGHT × {0})∧f∈dom(∅ ⦂ ℙ(FLIGHT×ℙ(ℤ)))" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtickets_contexz" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="size'" org.eventb.core.type="ℙ(FLIGHT×ℤ)"/>
+<org.eventb.core.poIdentifier name="r_seats'" org.eventb.core.type="ℙ(FLIGHT×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="departure'" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.poIdentifier name="arrival'" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtickets_contexz" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTIDENTtickets_contexz" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="add_flight/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="departure∪{flight1 ↦ departure1}∈FLIGHT ⇸ CITY" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#."/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#add_flight\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add_flight/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="arrival∪{flight1 ↦ arrival1}∈FLIGHT ⇸ CITY" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#."/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#add_flight\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add_flight/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="size∪{flight1 ↦ size1}∈FLIGHT ⇸ ℕ1" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#."/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#add_flight\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add_flight/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT∧f∈dom(departure∪{flight1 ↦ departure1})⇒f∈dom(arrival∪{flight1 ↦ arrival1})∧f∈dom(size∪{flight1 ↦ size1})∧f∈dom(r_seats)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#."/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#add_flight\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtickets_contex{" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="arrival1" org.eventb.core.type="CITY"/>
+<org.eventb.core.poIdentifier name="size'" org.eventb.core.type="ℙ(FLIGHT×ℤ)"/>
+<org.eventb.core.poIdentifier name="departure'" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.poIdentifier name="arrival'" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.poIdentifier name="size1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="departure1" org.eventb.core.type="CITY"/>
+<org.eventb.core.poIdentifier name="flight1" org.eventb.core.type="FLIGHT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtickets_contex{" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTIDENTtickets_contex{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="flight1∈FLIGHT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#.|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="size1∈ℕ" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#.|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="departure1∈CITY" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#.|org.eventb.core.guard#2"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="arrival1∈CITY" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#.|org.eventb.core.guard#3"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="⊤" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#.|org.eventb.core.guard#4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="delete_flight/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{flight1} ⩤ departure∈FLIGHT ⇸ CITY" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#delete_flight\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="delete_flight/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{flight1} ⩤ arrival∈FLIGHT ⇸ CITY" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#delete_flight\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="delete_flight/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{flight1} ⩤ r_seats∈FLIGHT ⇸ ℙ(ℕ1)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#delete_flight\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="delete_flight/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{flight1} ⩤ size∈FLIGHT ⇸ ℕ1" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#delete_flight\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="delete_flight/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT∧f∈dom({flight1} ⩤ departure)⇒f∈dom({flight1} ⩤ arrival)∧f∈dom({flight1} ⩤ size)∧f∈dom({flight1} ⩤ r_seats)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#delete_flight\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtickets_contex|" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="size'" org.eventb.core.type="ℙ(FLIGHT×ℤ)"/>
+<org.eventb.core.poIdentifier name="r_seats'" org.eventb.core.type="ℙ(FLIGHT×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="departure'" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.poIdentifier name="arrival'" org.eventb.core.type="ℙ(FLIGHT×CITY)"/>
+<org.eventb.core.poIdentifier name="flight1" org.eventb.core.type="FLIGHT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtickets_contex|" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTIDENTtickets_contex\|" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="flight1∈FLIGHT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="flight1∈dom(departure)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#\/|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="reserve_seat/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTIDENTtickets_contex}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="flight1∈dom(size)∧size∈FLIGHT ⇸ ℤ" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0|org.eventb.core.guard#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTIDENTtickets_contex}"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="reserve_seat/grd3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTHYPtickets_contex}("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="seat1∈ℕ1" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTHYPtickets_contex}("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="reserve_seat/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTHYPtickets_contex})"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="flight1∈dom(r_seats)⇒r_seats∈FLIGHT ⇸ ℙ(ℤ)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTHYPtickets_contex})"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="reserve_seat/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="r_seats{flight1 ↦ r_seats(flight1)∪{seat1}}∈FLIGHT ⇸ ℙ(ℕ1)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#reserve_seat\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="reserve_seat/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT∧f∈dom(departure)⇒f∈dom(arrival)∧f∈dom(size)∧f∈dom(r_seats{flight1 ↦ r_seats(flight1)∪{seat1}})" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#reserve_seat\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="reserve_seat/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="flight1∈dom(r_seats)∧r_seats∈FLIGHT ⇸ ℙ(ℤ)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0|org.eventb.core.action#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0|org.eventb.core.action#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex}"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtickets_contex}" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="seat1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="r_seats'" org.eventb.core.type="ℙ(FLIGHT×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="flight1" org.eventb.core.type="FLIGHT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPtickets_contex}(" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTIDENTtickets_contex}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="seat1&lt;size(flight1)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="flight1∈FLIGHT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPtickets_contex})" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTHYPtickets_contex}(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="seat1∈ℕ1" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtickets_contex}" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTHYPtickets_contex})" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="flight1∈dom(r_seats)∧seat1∉r_seats(flight1)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#0|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="refuse_seat/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTHYPtickets_contex~'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="flight1∈dom(size)⇒size∈FLIGHT ⇸ ℤ" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#2|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#2|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTHYPtickets_contex~'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="refuse_seat/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTHYPtickets_contex~("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="flight1∈dom(r_seats)⇒r_seats∈FLIGHT ⇸ ℙ(ℤ)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#2|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#2|org.eventb.core.guard#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTHYPtickets_contex~("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="refuse_seat/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="r_seats{flight1 ↦ r_seats(flight1) ∖ {seat1}}∈FLIGHT ⇸ ℙ(ℕ1)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#refuse_seat\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="refuse_seat/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT∧f∈dom(departure)⇒f∈dom(arrival)∧f∈dom(size)∧f∈dom(r_seats{flight1 ↦ r_seats(flight1) ∖ {seat1}})" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poSequent#refuse_seat\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="refuse_seat/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="flight1∈dom(r_seats)∧r_seats∈FLIGHT ⇸ ℙ(ℤ)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#2|org.eventb.core.action#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#2|org.eventb.core.action#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTALLHYPtickets_contex~"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtickets_contex~" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="seat1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="r_seats'" org.eventb.core.type="ℙ(FLIGHT×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="flight1" org.eventb.core.type="FLIGHT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPtickets_contex~'" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTIDENTtickets_contex~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="seat1∈ℕ1" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#2|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPtickets_contex~(" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTHYPtickets_contex~'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="flight1∈dom(size)∧seat1&lt;size(flight1)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#2|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtickets_contex~" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#EVTHYPtickets_contex~(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="flight1∈dom(r_seats)∧seat1∈r_seats(flight1)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.event#2|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/tickets/tickets_machine.bpo|org.eventb.core.poFile#tickets_machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="departure∈FLIGHT ⇸ CITY" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#4"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="arrival∈FLIGHT ⇸ CITY" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="r_seats∈FLIGHT ⇸ ℙ(ℕ1)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="size∈FLIGHT ⇸ ℕ1" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀f⦂FLIGHT·f∈FLIGHT∧f∈dom(departure)⇒f∈dom(arrival)∧f∈dom(size)∧f∈dom(r_seats)" org.eventb.core.source="/tickets/tickets_machine.bum|org.eventb.core.machineFile#tickets_machine|org.eventb.core.invariant#8"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

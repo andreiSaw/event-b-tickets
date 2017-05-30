@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="FLIGHT"/>
+<org.eventb.core.constant name="," org.eventb.core.identifier="capacity"/>
+<org.eventb.core.axiom name="-" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(FLIGHT) "/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm3" org.eventb.core.predicate="finite(RESERVE)"/>
+<org.eventb.core.axiom name="4" org.eventb.core.label="axm6" org.eventb.core.predicate="finite(CITY)"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="axm5" org.eventb.core.predicate="capacity∈FLIGHT → ℕ1 "/>
+<org.eventb.core.carrierSet name="2" org.eventb.core.identifier="RESERVE"/>
+<org.eventb.core.carrierSet name="3" org.eventb.core.identifier="CITY"/>
+</org.eventb.core.contextFile>

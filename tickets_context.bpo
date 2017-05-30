@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CITY" org.eventb.core.type="ℙ(CITY)"/>
+<org.eventb.core.poIdentifier name="FLIGHT" org.eventb.core.type="ℙ(FLIGHT)"/>
+<org.eventb.core.poIdentifier name="RESERVE" org.eventb.core.type="ℙ(RESERVE)"/>
+<org.eventb.core.poIdentifier name="capacity" org.eventb.core.type="ℙ(FLIGHT×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/tickets/tickets_context.bpo|org.eventb.core.poFile#tickets_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(FLIGHT)" org.eventb.core.source="/tickets/tickets_context.buc|org.eventb.core.contextFile#tickets_context|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finite(RESERVE)" org.eventb.core.source="/tickets/tickets_context.buc|org.eventb.core.contextFile#tickets_context|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="finite(CITY)" org.eventb.core.source="/tickets/tickets_context.buc|org.eventb.core.contextFile#tickets_context|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="capacity∈FLIGHT → ℕ1" org.eventb.core.source="/tickets/tickets_context.buc|org.eventb.core.contextFile#tickets_context|org.eventb.core.axiom#1"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
